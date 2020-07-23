@@ -59,6 +59,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scripts\Main.cs" />
+    <Compile Include="Scripts\Ticker\Auto.cs" />
+    <Compile Include="Scripts\Ticker\ITicker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

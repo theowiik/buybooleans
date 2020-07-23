@@ -14,20 +14,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Booleans" type="Label" parent="VBoxContainer"]
-margin_right = 142.0
+[node name="TickLabel" type="Label" parent="VBoxContainer"]
+margin_right = 170.0
 margin_bottom = 14.0
+
+[node name="Tick" type="Timer" parent="VBoxContainer/TickLabel"]
+autostart = true
+
+[node name="Booleans" type="Label" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 170.0
+margin_bottom = 32.0
 text = "Here are the booleans"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Add" type="Button" parent="VBoxContainer"]
-margin_top = 18.0
-margin_right = 142.0
-margin_bottom = 38.0
+margin_top = 36.0
+margin_right = 170.0
+margin_bottom = 56.0
 text = "Add"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Auto" type="Button" parent="VBoxContainer"]
+margin_top = 60.0
+margin_right = 170.0
+margin_bottom = 80.0
+text = "Buy Auto _ (10 booleans)"
+[connection signal="timeout" from="VBoxContainer/TickLabel/Tick" to="." method="OnTickTimeout"]
 [connection signal="pressed" from="VBoxContainer/Add" to="." method="OnAddPressed"]
+[connection signal="pressed" from="VBoxContainer/Auto" to="." method="OnAutoPressed"]
